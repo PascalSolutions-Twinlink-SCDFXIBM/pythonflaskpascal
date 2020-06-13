@@ -114,7 +114,7 @@ def api_all():
 
 @app.route('/')
 def hello_world():
-    return render_template("index.html", static_url_path='/public')
+    return render_template("index.html")
 
 @app.route('/<timestamp>')
 def showTimestamp(timestamp):
@@ -124,12 +124,12 @@ def showTimestamp(timestamp):
 @app.route("/grantscdfaccess")
 def grantscdfaccess():
     allowSCDFaccess.value = 1
-    return "Access granted to SCDF"
+    return  render_template('index0.html', content="Access granted to SCDF")
 
 @app.route("/denyscdfaccess")
 def denyscdfaccess():
     allowSCDFaccess.value = 0
-    return "SCDF access revoked"
+    return  render_template('index0.html', content="SCDF access revoked")
 
 @app.route("/write/<id>/<dataLoc>")
 def writeDB(id, dataLoc):
