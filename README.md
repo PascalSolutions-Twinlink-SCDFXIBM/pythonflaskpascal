@@ -12,7 +12,7 @@
 
 # Introduction
 
-Twinlink View is a Python Flask microservice hosted on IBM Cloudfoundry. It is part of the Twinlink Platform which serves to link digitally twinned cities to emergency responders such as SCDF.
+Twinlink rapidview is a Python Flask microservice hosted on IBM Cloudfoundry. It is part of the Twinlink Platform which serves to link digitally twinned cities to emergency responders such as SCDF.
 
 It retrieves processed data from IBM watson and presents it to building management for analytics and monitoring in normal operations. In the event of an emergency detected by any of the sensors, a digital pipeline is automatically unlocked for SCDF operations management platforms to access. It can also be manually unlocked by a building management if the sensors failed to detect emergencies.
 
