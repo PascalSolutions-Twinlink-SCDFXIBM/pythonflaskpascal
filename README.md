@@ -45,7 +45,7 @@ Due to technical limitations, the machine learning model is currently ran locall
     </a>
     
 ## ipad
-<a href="https://www.youtube.com/watch?v=eHnFF-SBNZ8">
+<a href="https://www.youtube.com/watch?v=6PSfKdDNGzY&">
     <img src="http://i3.ytimg.com/vi/6PSfKdDNGzY/hqdefault.jpg" alt="IBM Cloud">
     </a>
 
