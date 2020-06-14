@@ -1,9 +1,4 @@
-<p align="center">
-    <a href="https://cloud.ibm.com">
-        <img src="https://my1.digitalexperience.ibm.com/8304c341-f896-4e04-add0-0a9ae02473ba/dxdam/2d/2d559197-6763-4e47-a2cb-8f54c449ff26/ibm-cloud.svg" height="100" alt="IBM Cloud">
-    </a>
-    
-</p>
+
 <p align="center">
 <img src="https://i.imgur.com/mO5PdcB.png" height="200" alt="twinlink">
 </p>
@@ -16,16 +11,6 @@
 </p>
 
 # Introduction
-
-> We have applications available for [Node.js Express](https://github.com/IBM/node-express-app), [Go Gin](https://github.com/IBM/go-gin-app), [Python Flask](https://github.com/IBM/python-flask-app), [Python Django](https://github.com/IBM/python-django-app), [Java Spring](https://github.com/IBM/java-spring-app), [Java Liberty](https://github.com/IBM/java-liberty-app), [Swift Kitura](https://github.com/IBM/swift-kitura-app), [Android](https://github.com/IBM/android-app), and [iOS](https://github.com/IBM/ios-app).
-
-In this sample application, you will create a Python cloud application using Flask. This application contains an opinionated set of files for web serving:
-
-- `public/index.html`
-- `public/404.html`
-- `public/500.html`
-
-This application also enables a starting place for a Python microservice using Flask. A microservice is an individual component of an application that follows the **microservice architecture** - an architectural style that structures an application as a collection of loosely coupled services, which implement business capabilities. The microservice exposes a RESTful API matching a [Swagger](http://swagger.io) definition.
 
 Twinlink View is a Python Flask microservice hosted on IBM Cloudfoundry. It is part of the Twinlink Platform which serves to link digitally twinned cities to emergency responders such as SCDF.
 
