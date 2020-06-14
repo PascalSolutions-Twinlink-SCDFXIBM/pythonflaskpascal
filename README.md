@@ -1,10 +1,7 @@
+
 <p align="center">
-    <a href="https://cloud.ibm.com">
-        <img src="https://my1.digitalexperience.ibm.com/8304c341-f896-4e04-add0-0a9ae02473ba/dxdam/2d/2d559197-6763-4e47-a2cb-8f54c449ff26/ibm-cloud.svg" height="100" alt="IBM Cloud">
-    </a>
+<img src="https://i.imgur.com/mO5PdcB.png" height="200" alt="twinlink">
 </p>
-
-
 <p align="center">
     <a href="https://cloud.ibm.com">
     <img src="https://img.shields.io/badge/IBM%20Cloud-powered-blue.svg" alt="IBM Cloud">
@@ -13,44 +10,36 @@
     <img src="https://img.shields.io/badge/license-Apache2-blue.svg?style=flat" alt="Apache 2">
 </p>
 
+# Introduction
 
-# Create and deploy a Python Flask application
+Twinlink View is a Python Flask microservice hosted on IBM Cloudfoundry. It is part of the Twinlink Platform which serves to link digitally twinned cities to emergency responders such as SCDF.
 
-> We have applications available for [Node.js Express](https://github.com/IBM/node-express-app), [Go Gin](https://github.com/IBM/go-gin-app), [Python Flask](https://github.com/IBM/python-flask-app), [Python Django](https://github.com/IBM/python-django-app), [Java Spring](https://github.com/IBM/java-spring-app), [Java Liberty](https://github.com/IBM/java-liberty-app), [Swift Kitura](https://github.com/IBM/swift-kitura-app), [Android](https://github.com/IBM/android-app), and [iOS](https://github.com/IBM/ios-app).
+It retrieves processed data from IBM watson and presents it to building management for analytics and monitoring in normal operations. In the event of an emergency detected by any of the sensors, a digital pipeline is automatically unlocked for SCDF operations management platforms to access. It can also be manually unlocked by a building management if the sensors failed to detect emergencies.
 
-In this sample application, you will create a Python cloud application using Flask. This application contains an opinionated set of files for web serving:
+The digital pipeline provides the following information:
+- An API that allows SCDF operations management software to access Watson processed data such as number of people in specific locations, exact location of emergencies
+- Geometry of the building, overlayed with Watson processed data to allow for rapid sense-making
 
-- `public/index.html`
-- `public/404.html`
-- `public/500.html`
+# Features
+## Digital Twin for Emergency Responders
+[Twinlink rapidview](http://pythonflaskpascal.us-south.cf.appdomain.cloud/twinbuilding) also allows for an interative access of the digital twin of the building here. This uses a WebGL-based 3D Visualization engine that retrieves stored geometries of the building from the cloud, and overlays critical information necessary for the emergency responders. In this example, a fire is detected at one corner of the office, and the presented data would be the spread of the fire, as well as the number of people trapped in the room. As it is a web-based platform, there is no need for specialized equipment/ application downloads, it is fully functioning on smartphones too.
 
-This application also enables a starting place for a Python microservice using Flask. A microservice is an individual component of an application that follows the **microservice architecture** - an architectural style that structures an application as a collection of loosely coupled services, which implement business capabilities. The microservice exposes a RESTful API matching a [Swagger](http://swagger.io) definition.
+## API for Emergency Services
+[Twinlink access](http://pythonflaskpascal.us-south.cf.appdomain.cloud/api/v1/resources/locs/all) allows for API access into its database through URLs. Emergency services can set up their operations management platform to retrieve data from these API. With this data, they are able to use their own tools such as [Dynamic Resource Optimisation](https://sis.smu.edu.sg/news/2018/dec/17/scdf-rides-data-get-ambulances-patients-more-quickly) to optimise their response strategy.
 
-## Steps
+## API for Cloud Services
+[Twinlink write](http://pythonflaskpascal.us-south.cf.appdomain.cloud/write/1/15) is designed to allow cloud services such as Watson to write data into its database. A url-based sample is shown in this case, that will allow any cloud service to enter the number of people (noPax=15) at a location (id=1), the time of update is automatically generated.
+Due to technical limitations, the machine learning model is currently ran locally and there will be no live data stream, as such, a snapshot of the locally generated data will be used to showcase in this demonstration.
 
-You can [deploy this application to IBM Cloud](https://cloud.ibm.com/developer/appservice/starter-kits/python-flask-app) or [build it locally](#building-locally) by cloning this repo first. After your app is live, you can access the `/health` endpoint to build out your cloud native application.
+## Dashboard for Building Management
+[Twinlink view](http://pythonflaskpascal.us-south.cf.appdomain.cloud/) allows for building management staff to remotely monitor, perform analytics and provide access for emergency services.
 
-### Deploying to IBM Cloud
+# Live Demo
+[Live demo hosted on IBM Cloudfoundry](http://pythonflaskpascal.us-south.cf.appdomain.cloud/)
 
-<p align="center">
-    <a href="https://cloud.ibm.com/developer/appservice/starter-kits/python-flask-app">
-    <img src="https://cloud.ibm.com/devops/setup/deploy/button_x2.png" alt="Deploy to IBM Cloud">
-    </a>
-</p>
-
-Click **Deploy to IBM Cloud** to deploy this same application to IBM Cloud. This option creates a deployment pipeline, complete with a hosted GitLab project and a DevOps toolchain. You can deploy your app to Cloud Foundry, a Kubernetes cluster, or a Red Hat OpenShift cluster. OpenShift is available only through a standard cluster, which requires you to have a billable account.
-
-[IBM Cloud DevOps](https://www.ibm.com/cloud/devops) services provides toolchains as a set of tool integrations that support development, deployment, and operations tasks inside IBM Cloud.
-
-### Building locally
-
-To get started building this application locally, you can either run the application natively or use the [IBM Cloud Developer Tools](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started) for containerization and easy deployment to IBM Cloud.
-
-#### Native application development
-
-* Install [Python](https://www.python.org/downloads/)
- 
-Running Flask applications has been simplified with a `manage.py` file to avoid dealing with configuring environment variables to run your app. From your project root, you can download the project dependencies with (NOTE: If you don't have pipenv installed, execute: `pip install pipenv`):
+# Deployment
+## Local
+From the cloned project root, you can download the project dependencies with (NOTE: If you don't have pipenv installed, execute: `pip install pipenv`):
 
 ```bash
 pipenv install
@@ -68,15 +57,6 @@ python manage.py start
 * `livereload`: starts a development server via the `livereload` package. This includes backend reloading as well as dynamic frontend browser reloading. The Werkzeug stack-trace debugger will be disabled, so this is only recommended when working on frontend development.
 * `debug`: starts a native Flask development server, but with the native reloader/tracer disabled. This leaves the debug port exposed to be attached to an IDE (such as PyCharm's `Attach to Local Process`).
 
-There are also a few utility commands:
-* `build`: compiles `.py` files within the project directory into `.pyc` files
-* `test`: runs all unit tests inside of the project's `test` directory
-
-Your application is running at: `http://localhost:3000/` in your browser.
-- Your [Swagger UI](http://swagger.io/swagger-ui/) is running on: `/explorer`
-- Your Swagger definition is running on: `/swagger/api`
-- Health endpoint: `/health`
-
 There are two different options for debugging a Flask project:
 1. Run `python manage.py runserver` to start a native Flask development server. This comes with the Werkzeug stack-trace debugger, which will present runtime failure stack-traces in-browser with the ability to inspect objects at any point in the trace. For more information, see [Werkzeug documentation](http://werkzeug.pocoo.org/).
 2. Run `python manage.py debug` to run a Flask development server with debug exposed, but the native debugger/reloader turned off. This grants access for an IDE to attach itself to the process (i.e. in PyCharm, use `Run` -> `Attach to Local Process`).
@@ -85,7 +65,7 @@ You can also verify the state of your locally running application using the Sele
 
 > **Note for Windows users:** `gunicorn` is not supported on Windows. You may start the server with `python manage.py run` on your local machine or build and start the Dockerfile.
 
-#### IBM Cloud Developer Tools
+## IBM Cloud
 
 Install [IBM Cloud Developer Tools](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started) on your machine by running the following command:
 ```
@@ -120,10 +100,6 @@ You can build and debug your app locally with:
 ibmcloud dev build --debug
 ibmcloud dev debug
 ```
-
-## Next steps
-* Learn more about the services and capabilities of [IBM Cloud](https://cloud.ibm.com).
-* Explore other [sample applications](https://cloud.ibm.com/developer/appservice/starter-kits) on IBM Cloud.
 
 ## License
 
