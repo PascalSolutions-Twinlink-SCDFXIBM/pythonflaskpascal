@@ -22,7 +22,7 @@ The digital pipeline provides the following information:
 
 # Features
 ## Digital Twin for Emergency Responders
-[Twinlink view](http://pythonflaskpascal.us-south.cf.appdomain.cloud/twinbuilding) also allows for an interative access of the digital twin of the building here. This uses a WebGL-based 3D Visualization engine that retrieves stored geometries of the building from the cloud, and overlays critical information necessary for the emergency responders. In this example, a fire is detected at one corner of the office, and the presented data would be the spread of the fire, as well as the number of people trapped in the room. As it is a web-based platform, there is no need for specialized equipment/ application downloads, it is fully functioning on smartphones too.
+[Twinlink rapidview](http://pythonflaskpascal.us-south.cf.appdomain.cloud/twinbuilding) also allows for an interative access of the digital twin of the building here. This uses a WebGL-based 3D Visualization engine that retrieves stored geometries of the building from the cloud, and overlays critical information necessary for the emergency responders. In this example, a fire is detected at one corner of the office, and the presented data would be the spread of the fire, as well as the number of people trapped in the room. As it is a web-based platform, there is no need for specialized equipment/ application downloads, it is fully functioning on smartphones too.
 
 ## API for Emergency Services
 [Twinlink access](http://pythonflaskpascal.us-south.cf.appdomain.cloud/api/v1/resources/locs/all) allows for API access into its database through URLs. Emergency services can set up their operations management platform to retrieve data from these API. With this data, they are able to use their own tools such as [Dynamic Resource Optimisation](https://sis.smu.edu.sg/news/2018/dec/17/scdf-rides-data-get-ambulances-patients-more-quickly) to optimise their response strategy.
@@ -30,6 +30,9 @@ The digital pipeline provides the following information:
 ## API for Cloud Services
 [Twinlink write](http://pythonflaskpascal.us-south.cf.appdomain.cloud/write/1/15) is designed to allow cloud services such as Watson to write data into its database. A url-based sample is shown in this case, that will allow any cloud service to enter the number of people (noPax=15) at a location (id=1), the time of update is automatically generated.
 Due to technical limitations, the machine learning model is currently ran locally and there will be no live data stream, as such, a snapshot of the locally generated data will be used to showcase in this demonstration.
+
+## Dashboard for Building Management
+[Twinlink view](http://pythonflaskpascal.us-south.cf.appdomain.cloud/) allows for building management staff to remotely monitor, perform analytics and provide access for emergency services.
 
 # Live Demo
 [Live demo hosted on IBM Cloudfoundry](http://pythonflaskpascal.us-south.cf.appdomain.cloud/)
