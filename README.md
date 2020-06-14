@@ -37,6 +37,15 @@ Due to technical limitations, the machine learning model is currently ran locall
 # Live Demo
 [Live demo hosted on IBM Cloudfoundry](http://pythonflaskpascal.us-south.cf.appdomain.cloud/)
 
+# Video Demo
+# Web
+<a href="https://www.youtube.com/watch?v=eHnFF-SBNZ8">
+    <img src="http://i3.ytimg.com/vi/eHnFF-SBNZ8/maxresdefault.jpg" alt="IBM Cloud">
+    </a>
+# ipad
+
+
+
 # Deployment
 ## Local
 From the cloned project root, you can download the project dependencies with (NOTE: If you don't have pipenv installed, execute: `pip install pipenv`):
@@ -103,7 +112,7 @@ ibmcloud dev debug
 
 ## License
 
-This sample application is licensed under the Apache License, Version 2. Separate third-party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the [Developer Certificate of Origin, Version 1.1](https://developercertificate.org/) and the [Apache License, Version 2](https://www.apache.org/licenses/LICENSE-2.0.txt).
+This application is licensed under the Apache License, Version 2. Separate third-party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the [Developer Certificate of Origin, Version 1.1](https://developercertificate.org/) and the [Apache License, Version 2](https://www.apache.org/licenses/LICENSE-2.0.txt).
 
 [Apache License FAQ](https://www.apache.org/foundation/license-faq.html#WhatDoesItMEAN)
 
