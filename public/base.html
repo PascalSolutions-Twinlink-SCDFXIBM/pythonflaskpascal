@@ -4,7 +4,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <title>{% block title %}{% endblock %}</title>
+    <script src="https://gist.githubusercontent.com/liewdarwin/2188e5587583c0689b662cadf9e4c46e/raw/62c4ef7e0470b9f783bc14a946418047d4d2b985/xeogl.js"></script>
+    <script src="https://gist.githubusercontent.com/liewdarwin/161180db3b32e8a86c4993a0f3d87827/raw/b28c024075cd1e045d1654a8afd2927bb86ed23e/cameraFollowAnimation.js"></script>
+    <script src="https://gist.githubusercontent.com/liewdarwin/55b6b162af333ae6a7d5085e28d1f899/raw/3a47f24a2e5b6960187300eddd982c6dabd6193e/buildableModel.js"></script>
+
+            <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -15,16 +19,16 @@
          <div class="collapse navbar-collapse" id="navbarNav">
              <ul class="navbar-nav">
 	         <li class="nav-item active">
-                     <a class="nav-link" href="/api/v1/resources/locs/all">View SCDF API <span class="sr-only">(current)</span></a>
+                     <a class="nav-link" href="/twinbuilding">Digital Twin<span class="sr-only">(current)</span></a>
+		</li>
+    <li class="nav-item">
+		    <a class="nav-link" href="/api/v1/resources/locs/all">View SCDF API</a>
 		</li>
 		<li class="nav-item">
 		    <a class="nav-link" href="/grantscdfaccess">Grant SCDF Access</a>
 		</li>
 		<li class="nav-item">
 		    <a class="nav-link" href="/denyscdfaccess">Revoke SCDF Access</a>
-		</li>
-		<li class="nav-item">
-		    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
 		</li>
 	    </ul>
         </div>

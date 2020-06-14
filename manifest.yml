@@ -7,7 +7,7 @@ applications:
     FLASK_DEBUG: false
   host: null
   instances: 1
-  memory: 64M
+  memory: 256M
   name: pythonflaskpascal
   random-route: true
   routes:
