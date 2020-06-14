@@ -38,10 +38,12 @@ Due to technical limitations, the machine learning model is currently ran locall
 [Live demo hosted on IBM Cloudfoundry](http://pythonflaskpascal.us-south.cf.appdomain.cloud/)
 
 # Video Demo
+
 ## Web
 <a href="https://www.youtube.com/watch?v=eHnFF-SBNZ8">
     <img src="http://i3.ytimg.com/vi/eHnFF-SBNZ8/maxresdefault.jpg" alt="IBM Cloud">
     </a>
+    
 ## ipad
 <a href="https://www.youtube.com/watch?v=eHnFF-SBNZ8">
     <img src="http://i3.ytimg.com/vi/6PSfKdDNGzY/hqdefault.jpg" alt="IBM Cloud">
