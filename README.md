@@ -34,10 +34,6 @@ Due to technical limitations, the machine learning model is currently ran locall
 # Live Demo
 [Live demo hosted on IBM Cloudfoundry](http://pythonflaskpascal.us-south.cf.appdomain.cloud/)
 
-
-# Technical Explanation
-## Digital Twin for Emergency Responders
-
 # Deployment
 ## Local
 From the cloned project root, you can download the project dependencies with (NOTE: If you don't have pipenv installed, execute: `pip install pipenv`):
@@ -66,7 +62,7 @@ You can also verify the state of your locally running application using the Sele
 
 > **Note for Windows users:** `gunicorn` is not supported on Windows. You may start the server with `python manage.py run` on your local machine or build and start the Dockerfile.
 
-## Deploying to IBM Cloud
+## IBM Cloud
 
 Install [IBM Cloud Developer Tools](https://cloud.ibm.com/docs/cli?topic=cloud-cli-getting-started) on your machine by running the following command:
 ```
